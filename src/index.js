@@ -4,9 +4,9 @@
 var languageStrings = {
   'en': {
     'translation': {
-      'WELCOME': "Welcome to the best sushi in Oregon.",
+      'WELCOME': "Welcome Sushi Central",
       'TITLE': "Sushi",
-      'HELP': "We will teach you how to make the best sushi. Our virtual chef, Kenji Fujimoto will guide through every step to ensure you have to highest quality sushi possible. ",
+      'HELP': "Main menu. You can say, make sushi, mail sushi to my friends, and find nearest sushi place",
       'STOP': "Sayonara"
     }
   }
@@ -38,7 +38,11 @@ var data = {
     "Put fish and rice together.",
     "You now have the best sushi in the world",
     "Serve."
-  ]
+  ],
+  "locations": [{
+    "name": "Mio Sushi",
+    "location": "Portland, Oregon"
+  }]
 };
 
 var welcomeCardImg = {
@@ -59,7 +63,7 @@ exports.handler = function(event, context, callback) {
   var alexa = Alexa.handler(event, context);
 
   alexa.appId = 'amzn1.ask.skill.9adccfe9-f1bd-4a15-afb3-f2a9e625f3f3';
-  // alexa.dynamoDBTableName = 'RecipeSkillTable'; // creates new table for session.attributes
+  alexa.dynamoDBTableName = 'RecipeSkillTable'; // creates new table for session.attributes
 
   alexa.resources = languageStrings;
   alexa.registerHandlers(handlers);
@@ -84,6 +88,20 @@ var handlers = {
       this.emit(':askWithCard', say, say, 'Continue?', say);
     }
 
+  },
+
+  'FindSushiIntent': function() {
+    var say = 'The nearest ';
+  },
+
+  'MainIntent': function() {
+    var say = 'Main menu. You can say, make sushi, mail sushi to my friends, and find nearest sushi place';
+    this.emit(":tell", say);
+  },
+
+  'MailIntent': function() {
+    var say = 'Who you like to mail your sushi to?';
+    this.emit(':tell', say);
   },
 
   'IngredientsIntent': function() {
