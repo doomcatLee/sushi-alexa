@@ -58,8 +58,8 @@ AWS.config.update({
 exports.handler = function(event, context, callback) {
   var alexa = Alexa.handler(event, context);
 
-  alexa.appId = 'amzn1.ask.skill.7322a447-b9f8-4887-a564-1c00120dd2b8';
-  alexa.dynamoDBTableName = 'Recipe'; // creates new table for session.attributes
+  alexa.appId = 'amzn1.ask.skill.9adccfe9-f1bd-4a15-afb3-f2a9e625f3f3';
+  // alexa.dynamoDBTableName = 'RecipeSkillTable'; // creates new table for session.attributes
 
   alexa.resources = languageStrings;
   alexa.registerHandlers(handlers);
@@ -173,7 +173,10 @@ var handlers = {
   'SessionEndedRequest': function() {
     console.log('session ended!');
     this.emit(':saveState', true);
-  }
+  },
+  'Unhandled': function() {
+    this.emit(':ask', 'I don\'t get it!', 'I don\'t get it!');
+  },
 
 };
 
