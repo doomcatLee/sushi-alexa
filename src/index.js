@@ -42,8 +42,8 @@ var data = {
 };
 
 var welcomeCardImg = {
-  smallImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sandwich_small.png',
-  largeImageUrl: 'https://s3.amazonaws.com/webappvui/img/breakfast_sandwich_large.png'
+  smallImageUrl: 'https://img.grouponcdn.com/deal/vp9PocZkrsK7BA3v49kDwRpc5XB/vp-700x420/v1/c700x420.jpg',
+  largeImageUrl: 'https://img.grouponcdn.com/deal/vp9PocZkrsK7BA3v49kDwRpc5XB/vp-700x420/v1/c700x420.jpg'
 };
 // 2. Skill Code =======================================================================================================
 
