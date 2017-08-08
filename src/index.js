@@ -4,10 +4,10 @@
 var languageStrings = {
   'en': {
     'translation': {
-      'WELCOME': "Welcome to the Breakfast Sandwich Recipe skill. ",
-      'TITLE': "Breakfast Sandwich",
-      'HELP': "This skill will show you how to make a breakfast sandwich.  You can ask for the list of ingredients, or just say begin cooking if you are ready. Once you are cooking, just say Next to advance to the next step in the recipe. You can also pause the recipe at any time by saying Pause.",
-      'STOP': "Okay, see you next time! "
+      'WELCOME': "Welcome to the best sushi in Oregon.",
+      'TITLE': "Sushi",
+      'HELP': "We will teach you how to make the best sushi. Our virtual chef, Kenji Fujimoto will guide through every step to ensure you have to highest quality sushi possible. ",
+      'STOP': "Sayonara"
     }
   }
   // , 'de-DE': { 'translation' : { 'WELCOME'   : "Guten Tag etc." } }
@@ -31,12 +31,12 @@ var data = {
     }
   ],
   "steps": [
-    "Heat a frying pan on your stove over medium heat.",
-    "Crack an egg in the skillet and heat until the egg becomes firm.",
-    "Flip the egg with a spatula.",
-    "Lay the cheese on top of the egg.",
-    "Using a spatula, remove egg and cheese and place on one piece of bread.",
-    "Place second piece of bread over the egg and cheese.",
+    "Visit Japan. Convert your race to Japanese.",
+    "Never speak English. Japanese only. ",
+    "Get rice.",
+    "Get fish.",
+    "Put fish and rice together.",
+    "You now have the best sushi in the world",
     "Serve."
   ]
 };
